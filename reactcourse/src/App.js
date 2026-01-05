@@ -1,13 +1,26 @@
-// import Variables from "./Topics/Variables";
-
 import Event from "./Topics/Event";
-
+import Variables from "./Topics/Variables";
 
 function App() {
   return (
     <div>
-      {/* <Variables/> */}
-      <Event></Event>
+      <div className="container">
+        <div className="row">
+          <div className="col text-center">
+            <span className="text-danger">-------------------------------------Variable Topic--------------------------------------</span>
+
+            <Variables></Variables>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col text-center">
+            <span className="text-danger">-------------------------------------Event Topic--------------------------------------</span>
+
+            <Event></Event>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
