@@ -1,9 +1,10 @@
+import Variables from "./Topics/Variables";
 
 
 function App() {
   return (
     <div>
-     
+      <Variables/>
     </div>
   );
 }
