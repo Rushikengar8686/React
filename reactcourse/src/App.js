@@ -1,10 +1,13 @@
-import Variables from "./Topics/Variables";
+// import Variables from "./Topics/Variables";
+
+import Event from "./Topics/Event";
 
 
 function App() {
   return (
     <div>
-      <Variables/>
+      {/* <Variables/> */}
+      <Event></Event>
     </div>
   );
 }
