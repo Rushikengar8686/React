@@ -16,12 +16,6 @@ const Event = () => {
         console.log(a+b)
     }
 
-    //Onchange Event
-    const[name,setname] = useState("")
-    const printName = (event) =>{
-        setname(event.target.value)
-    }   
-
 
     return (
         <div>
@@ -37,10 +31,7 @@ const Event = () => {
                     <button type="button" className='btn btn-success' onClick={()=> printSumOftwoNumber(10,20)}>sum</button>
 
                 </div>
-                <div className="col-3">
-                    <h5>My name is :: <span className='text-danger'>{name}</span></h5>
-                    <input type="text" className='form-control' onChange={(event)=>{printName(event)}}/>
-                </div>
+                
             </div>
             </div>
             
