@@ -1,11 +1,21 @@
+import { FaMoon } from "react-icons/fa";
+import DynamicCss from "./DynamicCss/DynamicCss";
 import Event from "./Topics/Event";
 import SetState from "./Topics/SetState";
 import Variables from "./Topics/Variables";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { useState } from "react";
 function App() {
+
+
+  const [backroundColor,setBackground] = useState(false)
+  const changeBackground = ()=>{
+    setBackground(!backroundColor)
+
+  }
   return (
-    <div>
-      <div className="container">
+    <div style={{backgroundColor:backroundColor ? "#6e9691": "white"}} >
+      <div className="container" >
         <BrowserRouter>
           <nav className="navbar navbar-expand-lg navbar-light bg-info">
             <div className="container-fluid">
@@ -24,10 +34,15 @@ function App() {
                    <li className="nav-item">
                     <Link className="nav-link active" to="SetState">Set-State</Link>
                    </li>
+                   <li className="nav-item">
+                    <Link className="nav-link active" to="DynamicCss">DynamicCss</Link>
+                   </li>
                 </ul>
                 <form className="d-flex">
                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn btn-outline-secondary" type="submit">Search</button>
+                  <button className="btn btn-outline-secondary me-2" type="submit">Search</button> 
+                  <button type="button" className='btn btn-outline-danger' onClick={changeBackground}><FaMoon></FaMoon></button>
+
                 </form>
               </div>
             </div>
@@ -36,6 +51,7 @@ function App() {
             <Route path="/" element={<Variables></Variables>}></Route>
             <Route path="Event" element={<Event></Event>}></Route>
             <Route path="SetState" element={<SetState></SetState>}></Route>
+            <Route path = "DynamicCss" element={<DynamicCss></DynamicCss>}></Route>
 
           </Routes>
         </BrowserRouter>
