@@ -6,6 +6,7 @@ import Variables from "./Topics/Variables";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { useState } from "react";
 import Customer from "./Customer/Customer";
+import ParentComp from "./Reuseable Comp/ParentComp";
 function App() {
 
 
@@ -41,6 +42,9 @@ function App() {
                    <li className="nav-item">
                     <Link className="nav-link active" to="cutomer">Cutomer</Link>
                    </li>
+                   <li className="nav-item">
+                    <Link className="nav-link active" to="ParentComp">ParentComp</Link>
+                   </li>
                 </ul>
                 <form className="d-flex">
                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -57,6 +61,7 @@ function App() {
             <Route path="SetState" element={<SetState></SetState>}></Route>
             <Route path = "DynamicCss" element={<DynamicCss></DynamicCss>}></Route>
             <Route path="cutomer" element={<Customer></Customer>}></Route>
+            <Route path="ParentComp" element={<ParentComp></ParentComp>}></Route>
 
           </Routes>
         </BrowserRouter>
