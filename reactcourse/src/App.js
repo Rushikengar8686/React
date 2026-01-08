@@ -5,6 +5,7 @@ import SetState from "./Topics/SetState";
 import Variables from "./Topics/Variables";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { useState } from "react";
+import Customer from "./Customer/Customer";
 function App() {
 
 
@@ -15,7 +16,7 @@ function App() {
   }
   return (
     <div style={{backgroundColor:backroundColor ? "#6e9691": "white"}} >
-      <div className="container" >
+      <div className="container-fulid" >
         <BrowserRouter>
           <nav className="navbar navbar-expand-lg navbar-light bg-info">
             <div className="container-fluid">
@@ -37,6 +38,9 @@ function App() {
                    <li className="nav-item">
                     <Link className="nav-link active" to="DynamicCss">DynamicCss</Link>
                    </li>
+                   <li className="nav-item">
+                    <Link className="nav-link active" to="cutomer">Cutomer</Link>
+                   </li>
                 </ul>
                 <form className="d-flex">
                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -52,6 +56,7 @@ function App() {
             <Route path="Event" element={<Event></Event>}></Route>
             <Route path="SetState" element={<SetState></SetState>}></Route>
             <Route path = "DynamicCss" element={<DynamicCss></DynamicCss>}></Route>
+            <Route path="cutomer" element={<Customer></Customer>}></Route>
 
           </Routes>
         </BrowserRouter>
