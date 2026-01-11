@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ChlidComp from './ChlidComp';
+import axios from 'axios';
 
 const ParentComp = () => {
     //Pass name to the chlid comp
@@ -12,6 +13,15 @@ const ParentComp = () => {
     const onchangeEvent = (event)=>{
         setSelectCity(event.target.value)
         alert("This is my Current City is "+" "+event.target.value)
+    }
+
+    useEffect(()=>{
+        getallCompanies()
+    },[])
+    // Simple call Employee Api
+    const getallCompanies = async ()=>{
+        const res = await axios.get("https://api.freeprojectapi.com/api/EmployeeOnboarding/GetCompanies")
+        console.log(res.data)
     }
 
     return (
