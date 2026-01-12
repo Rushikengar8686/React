@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const Login = () => {
-
-  //  correct useLocation
+const Login = ({ setIsActive }) => {
+  const navigate = useNavigate();
   const location = useLocation();
   const registerData = location.state?.registerData;
 
-  // Login form state
-  const [from, setFrom] = useState({
+  const [form, setForm] = useState({
     Email: "",
     password: ""
   });
 
-  // handle form data
-  const hanldeFromdata = (event, key) => {
-    setFrom(prevObj => ({
-      ...prevObj,
+  const handleFormData = (event, key) => {
+    setForm(prev => ({
+      ...prev,
       [key]: event.target.value
     }));
   };
@@ -25,10 +22,11 @@ const Login = () => {
     e.preventDefault();
 
     if (
-      from.Email === registerData?.Email &&
-      from.password === registerData?.Paaword
+      form.Email === registerData?.Email &&
+      form.password === registerData?.Paaword
     ) {
-      alert("Login Successful");
+      setIsActive(true);            
+      navigate(' ');      
     } else {
       alert("Failed login. Try again");
     }
@@ -42,13 +40,13 @@ const Login = () => {
             <div className="card-body">
               <h3 className="card-title text-center mb-4">Login</h3>
 
-              <form>
+              <form onSubmit={LoginUser}>
                 <div className="mb-3">
                   <label className="form-label">Email</label>
                   <input
                     type="email"
                     className="form-control"
-                    onChange={(e) => hanldeFromdata(e, "Email")}
+                    onChange={(e) => handleFormData(e, "Email")}
                     placeholder="Enter Email"
                   />
                 </div>
@@ -58,16 +56,12 @@ const Login = () => {
                   <input
                     type="password"
                     className="form-control"
-                    onChange={(e) => hanldeFromdata(e, "password")}
+                    onChange={(e) => handleFormData(e, "password")}
                     placeholder="Enter Password"
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="btn btn-primary w-100"
-                  onClick={LoginUser}
-                >
+                <button type="submit" className="btn btn-primary w-100">
                   Login
                 </button>
               </form>

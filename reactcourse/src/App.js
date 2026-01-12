@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
 
         {/*NAVBAR ONLY AFTER LOGIN */}
-        {!isActive && (
+        {isActive && (
           <nav className="navbar navbar-expand-lg navbar-light bg-info">
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">Navbar</Link>
