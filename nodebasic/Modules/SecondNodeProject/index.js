@@ -1,16 +1,11 @@
 // load the Data Set
 const data = require("./MOCK_DATA.json")
-
 // To import express modules
 const express  = require("express")
-
 // import fs module
 const fs = require("fs")
-
 // now create Port 
 const PORT = 4000
-
-
 // create app
 const app = express()
 
