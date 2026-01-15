@@ -1,0 +1,146 @@
+[
+  {
+    "empId": 2,
+    "EmpFirstName": "Bron",
+    "EmpLastName": "Lambdon",
+    "email": "blambdon1@economist.com",
+    "gender": "Male",
+    "EmpRole": "Architect"
+  },
+  {
+    "empId": 3,
+    "EmpFirstName": "Ken",
+    "EmpLastName": "Lamping",
+    "email": "klamping2@eventbrite.com",
+    "gender": "Male",
+    "EmpRole": "Subcontractor"
+  },
+  {
+    "empId": 4,
+    "EmpFirstName": "Bord",
+    "EmpLastName": "Salazar",
+    "email": "bsalazar3@bing.com",
+    "gender": "Male",
+    "EmpRole": "Electrician"
+  },
+  {
+    "empId": 5,
+    "EmpFirstName": "Donall",
+    "EmpLastName": "Deacock",
+    "email": "ddeacock4@mediafire.com",
+    "gender": "Male",
+    "EmpRole": "Construction Manager"
+  },
+  {
+    "empId": 6,
+    "EmpFirstName": "Oberon",
+    "EmpLastName": "Mumby",
+    "email": "omumby5@shinystat.com",
+    "gender": "Male",
+    "EmpRole": "Construction Manager"
+  },
+  {
+    "empId": 7,
+    "EmpFirstName": "Ileana",
+    "EmpLastName": "Coggeshall",
+    "email": "icoggeshall6@slate.com",
+    "gender": "Genderfluid",
+    "EmpRole": "Surveyor"
+  },
+  {
+    "empId": 8,
+    "EmpFirstName": "Sherri",
+    "EmpLastName": "Orcott",
+    "email": "sorcott7@sakura.ne.jp",
+    "gender": "Female",
+    "EmpRole": "Estimator"
+  },
+  {
+    "empId": 9,
+    "EmpFirstName": "Mable",
+    "EmpLastName": "Stanex",
+    "email": "mstanex8@irs.gov",
+    "gender": "Female",
+    "EmpRole": "Construction Expeditor"
+  },
+  {
+    "empId": 10,
+    "EmpFirstName": "Amelie",
+    "EmpLastName": "Fergyson",
+    "email": "afergyson9@deviantart.com",
+    "gender": "Female",
+    "EmpRole": "Supervisor"
+  },
+  {
+    "empId": 11,
+    "EmpFirstName": "Weylin",
+    "EmpLastName": "Haslegrave",
+    "email": "whaslegravea@unesco.org",
+    "gender": "Male",
+    "EmpRole": "Construction Foreman"
+  },
+  {
+    "empId": 12,
+    "EmpFirstName": "Chiquia",
+    "EmpLastName": "Chishull",
+    "email": "cchishullb@pcworld.com",
+    "gender": "Female",
+    "EmpRole": "Supervisor"
+  },
+  {
+    "empId": 13,
+    "EmpFirstName": "Alica",
+    "EmpLastName": "Hallatt",
+    "email": "ahallattc@goo.gl",
+    "gender": "Female",
+    "EmpRole": "Project Manager"
+  },
+  {
+    "empId": 14,
+    "EmpFirstName": "Haily",
+    "EmpLastName": "Thomkins",
+    "email": "hthomkinsd@sohu.com",
+    "gender": "Bigender",
+    "EmpRole": "Architect"
+  },
+  {
+    "empId": 15,
+    "EmpFirstName": "Arri",
+    "EmpLastName": "Proger",
+    "email": "aprogere@google.co.jp",
+    "gender": "Male",
+    "EmpRole": "Construction Manager"
+  },
+  {
+    "empId": 16,
+    "EmpFirstName": "Nata",
+    "EmpLastName": "Deeson",
+    "email": "ndeesonf@about.com",
+    "gender": "Female",
+    "EmpRole": "Surveyor"
+  },
+  {
+    "empId": 17,
+    "EmpFirstName": "Kendall",
+    "EmpLastName": "Coffin",
+    "email": "kcoffing@foxnews.com",
+    "gender": "Male",
+    "EmpRole": "Project Manager"
+  },
+  {
+    "empId": 18,
+    "EmpFirstName": "Kirstin",
+    "EmpLastName": "Wardrop",
+    "email": "kwardroph@e-recht24.de",
+    "gender": "Female",
+    "EmpRole": "Construction Worker"
+  },
+  {
+    "empId": 19,
+    "EmpFirstName": "Charis",
+    "EmpLastName": "Warret",
+    "email": "cwarreti@biblegateway.com",
+    "gender": "Female",
+    "EmpRole": "Engineer"
+  }
+]
