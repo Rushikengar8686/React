@@ -1,16 +1,11 @@
 // load the Data Set
 const data = require("./MOCK_DATA.json")
-
 // To import express modules
 const express  = require("express")
-
 // import fs module
 const fs = require("fs")
-
 // now create Port 
 const PORT = 4000
-
-
 // create app
 const app = express()
 
@@ -23,6 +18,30 @@ app.use(express.json())
 app.get("/api/getAllEmp",(req,res)=>{
     return res.json(data)
 })
+
+// To call Post Api 
+// To Send Data in Sever
+app.post("/api/createNewEmp", (req, res) => {
+    // get data from request body
+    const body = req.body;
+
+    // create new employee
+    const newEmp = { ...body, empId: data.length + 1 };
+
+    // push to array
+    data.push(newEmp);
+
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(data, null, 2), err => {
+        if (err) {
+            return res.status(500).json({ message: "Employee Not Created" });
+        }
+
+        return res.status(201).json({
+            message: "Employee Create Success",
+            Id: newEmp.empId
+        });
+    });
+});
 
 
 // GetAllEmpByID

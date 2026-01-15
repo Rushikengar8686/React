@@ -1,13 +1,5 @@
 [
   {
-    "empId": 2,
-    "EmpFirstName": "Bron",
-    "EmpLastName": "Lambdon",
-    "email": "blambdon1@economist.com",
-    "gender": "Male",
-    "EmpRole": "Architect"
-  },
-  {
     "empId": 3,
     "EmpFirstName": "Ken",
     "EmpLastName": "Lamping",
@@ -128,19 +120,27 @@
     "EmpRole": "Project Manager"
   },
   {
-    "empId": 18,
-    "EmpFirstName": "Kirstin",
-    "EmpLastName": "Wardrop",
-    "email": "kwardroph@e-recht24.de",
-    "gender": "Female",
-    "EmpRole": "Construction Worker"
+    "EmpFirstName": "Rushikesh",
+    "EmpLastName": "Kengar",
+    "email": "rushikesh@gmail.com",
+    "gender": "Male",
+    "EmpRole": "React.js Developer",
+    "empId": 18
   },
   {
-    "empId": 19,
-    "EmpFirstName": "Charis",
-    "EmpLastName": "Warret",
-    "email": "cwarreti@biblegateway.com",
-    "gender": "Female",
-    "EmpRole": "Engineer"
+    "EmpFirstName": "Sudhir",
+    "EmpLastName": "Phule",
+    "email": "sudhirPhule@gmail.com",
+    "gender": "Male",
+    "EmpRole": "Softwear Developer",
+    "empId": 19
+  },
+  {
+    "EmpFirstName": "Pushaparaje",
+    "EmpLastName": "Chnadhanshive",
+    "email": "push@gmail.com",
+    "gender": "Male",
+    "EmpRole": "Softwear Developer",
+    "empId": 18
   }
 ]
