@@ -19,6 +19,30 @@ app.get("/api/getAllEmp",(req,res)=>{
     return res.json(data)
 })
 
+// To call Post Api 
+// To Send Data in Sever
+app.post("/api/createNewEmp", (req, res) => {
+    // get data from request body
+    const body = req.body;
+
+    // create new employee
+    const newEmp = { ...body, empId: data.length + 1 };
+
+    // push to array
+    data.push(newEmp);
+
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(data, null, 2), err => {
+        if (err) {
+            return res.status(500).json({ message: "Employee Not Created" });
+        }
+
+        return res.status(201).json({
+            message: "Employee Create Success",
+            Id: newEmp.empId
+        });
+    });
+});
+
 
 // GetAllEmpByID
 
