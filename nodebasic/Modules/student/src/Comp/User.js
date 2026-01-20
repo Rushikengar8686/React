@@ -92,7 +92,7 @@ const User = () => {
                                                         <td>{users.phoneNo}</td>
                                                         <td>{users.Email}</td>
                                                         <td>
-                                                            <button type="button" className='btn btn-sm btn-warning m-2'>Edit</button>
+                                                            <button type="button" className='btn btn-sm btn-warning m-2'>Edit</button>,
                                                             <button type="button" className='btn btn-sm btn-danger' onClick={()=>deleteStudent(users._id)}>Del</button>
                                                         </td>
                                                     </tr>

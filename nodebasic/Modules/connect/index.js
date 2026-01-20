@@ -3,9 +3,11 @@ const Router = require("./Router/router")
 const {connectToMomgoDb} = require("./connection/connect")
 
 const app = express()
+const cors = require('cors')
 
 // middleware plugin
 app.use(express.urlencoded({extended:false}))
+app.use(cors())
 app.use(express.json())
 
 
