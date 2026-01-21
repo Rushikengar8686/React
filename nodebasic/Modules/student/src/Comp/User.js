@@ -4,12 +4,15 @@ const User = () => {
     const[getdata,setGetData] = useState([])
     const [addNewStudent,setAddNewStudent] = useState(
         {
+            id:"",
             firstName:"",
             lastName:"",
             phoneNo:"",
             Email:""
         }
     )
+
+   
     
     // handleGeta All Student data
     const handelAddNewStudentData = (event,key)=>{
@@ -32,6 +35,9 @@ const User = () => {
     // add new student
     const saveStudent = async ()=>{
         try {
+            if(!addNewStudent.firstName || !addNewStudent.lastName|| !addNewStudent.phoneNo || !addNewStudent.Email){
+                 return alert("All Flied are Requires")
+            }
             const result = await axios.post(GetAndPostUrl,addNewStudent)
             setAddNewStudent(result.data)
             GetAllUser()
@@ -45,6 +51,16 @@ const User = () => {
             console.log(error)
         }
     }
+    // Edit student Details
+    const EditStudentDetails = (user) => {
+    setAddNewStudent({
+        id: user._id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        phoneNo: user.phoneNo,
+        Email: user.Email
+    });
+};
 
     // Delete Student
     const deleteStudent =  async (id)=>{
@@ -56,6 +72,26 @@ const User = () => {
             console.log(error)
         }
     }
+    // UPDATE THE RECOARD
+    const updateStudentDtails = async (id) => {
+        debugger
+    try {
+        const updateMessage = await axios.put(`${deleteUserByIdUrl}/${id}`, addNewStudent);
+        alert(updateMessage.data.messagae);
+        GetAllUser();
+
+        setAddNewStudent({
+            id: "",
+            firstName: "",
+            lastName: "",
+            phoneNo: "",
+            Email: "",
+        });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
     useEffect(()=>{
         GetAllUser()
     },[])
@@ -92,7 +128,7 @@ const User = () => {
                                                         <td>{users.phoneNo}</td>
                                                         <td>{users.Email}</td>
                                                         <td>
-                                                            <button type="button" className='btn btn-sm btn-warning m-2'>Edit</button>,
+                                                            <button type="button" className='btn btn-sm btn-warning m-2' onClick={()=> EditStudentDetails(users)}>Edit</button>
                                                             <button type="button" className='btn btn-sm btn-danger' onClick={()=>deleteStudent(users._id)}>Del</button>
                                                         </td>
                                                     </tr>
@@ -113,24 +149,32 @@ const User = () => {
                             <div className="row">
                             <div className="col-6 p-4">
                                 <label htmlFor="">Enter Student First Name</label>
-                                <input type="text"  className='form-control mt-2' onChange={(event)=>{handelAddNewStudentData(event,'firstName')}} placeholder='Enter Name'/>
+                                <input type="text"  className='form-control mt-2' value={addNewStudent.firstName} onChange={(event)=>{handelAddNewStudentData(event,'firstName')}} placeholder='Enter Name'/>
                             </div>
                             <div className="col-6 p-4">
                                 <label htmlFor="">Enter Student Last Name</label>
-                                <input type="text"  className='form-control mt-2' onChange={(event)=>{handelAddNewStudentData(event,'lastName')}} placeholder='Enter Name'/>
+                                <input type="text"  className='form-control mt-2' value={addNewStudent.lastName} onChange={(event)=>{handelAddNewStudentData(event,'lastName')}} placeholder='Enter Name'/>
                             </div>
                             <div className="col-6 p-4">
                                 <label htmlFor="">Enter Student Phone No</label>
-                                <input type="text"  className='form-control mt-2' onChange={(event)=>{handelAddNewStudentData(event,'phoneNo')}} placeholder='Enter Name'/>
+                                <input type="text"  className='form-control mt-2' value={addNewStudent.phoneNo} onChange={(event)=>{handelAddNewStudentData(event,'phoneNo')}} placeholder='Enter Name'/>
                             </div>
                             <div className="col-6 p-4">
                                 <label htmlFor="">Enter Student Email</label>
-                                <input type="text"  className='form-control mt-2' onChange={(event)=>{handelAddNewStudentData(event,'Email')}} placeholder='Enter Name'/>
+                                <input type="text"  className='form-control mt-2' value={addNewStudent.Email} onChange={(event)=>{handelAddNewStudentData(event,'Email')}} placeholder='Enter Name'/>
                             </div>
                             <div className="row text-center p-3">
-                                <div className="col-12">
+                                {
+                                    addNewStudent.id === ''  && <div className="col-12">
                                     <button type="button" className='btn btn-success' onClick={saveStudent}>Save</button>
                                 </div>
+                                }
+                                {
+                                   addNewStudent.id !== ''  && <div className="col-12">
+                                    <button type="button" className='btn btn-warning' onClick={() => updateStudentDtails(addNewStudent.id)}>update</button>
+                                </div> 
+                                }
+                                
                             </div>
                         </div>
                         </div>
