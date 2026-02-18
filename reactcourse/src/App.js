@@ -9,6 +9,9 @@ import Customer from "./Customer/Customer";
 import ParentComp from "./Reuseable Comp/ParentComp";
 import Register from "./Login/Register";
 import Login from "./Login/Login";
+import NewHooks from "./newHooks/NewHooks";
+import DashValue from "./context/DashValue";
+import AcronymGenerator from "./ReactTask/AcronymGenerator"
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -36,6 +39,9 @@ function App() {
                   <li className="nav-item"><Link className="nav-link" to="/DynamicCss">DynamicCss</Link></li>
                   <li className="nav-item"><Link className="nav-link" to="/cutomer">Customer</Link></li>
                   <li className="nav-item"><Link className="nav-link" to="/ParentComp">ParentComp</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/NewHooks">NewHooks</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/DashValue">DashValue</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/AcronoymStr">AcronoymStr</Link></li>
                 </ul>
 
                 <button className="btn btn-outline-dark me-2" onClick={changeBackground}>
@@ -64,6 +70,9 @@ function App() {
           <Route path="/DynamicCss" element={<DynamicCss />} />
           <Route path="/cutomer" element={<Customer />} />
           <Route path="/ParentComp" element={<ParentComp />} />
+          <Route path="/NewHooks" element={<NewHooks/>}></Route>
+          <Route path="/DashValue" element={<DashValue/>}></Route>
+          <Route path="/AcronoymStr" element={<AcronymGenerator/>}></Route>
         </Routes>
 
       </BrowserRouter>

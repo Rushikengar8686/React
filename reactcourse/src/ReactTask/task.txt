@@ -1,0 +1,30 @@
+An acronym is formed by taking the first letter of each word, converting it to uppercase, and joining them together. This is useful in text shortening, branding (NASA, HTML, etc.), or fun abbreviation generators.
+
+Things to do
+
+Create an input where the user can type a phrase. Implement a function that:
+
+Splits the phrase into words.
+
+Takes the first letter of each word.
+
+Converts it to uppercase.
+
+Joins the letters together to form the acronym
+
+Add a button to generate the acronym
+Result: CSS // For Cascading Style Sheet as
+
+Examples
+
+input: "National Aeronautics Space Administra
+output: "NASA"
+
+input:Hyper Text Markup Language
+output:"HTML"
+
+
+
+
+
+
