@@ -5,7 +5,7 @@ const AcronymGenerator = () => {
     const [output,setOutput] = useState("")
 
     const genreateShort = (text)=>{
-        const result = text.split(" ").map((m)=> m[0].toUpperCase()).join("")
+        const result = text.split(" ").map((m)=> m[0].toUpperCase()).join(" ")
         setOutput(result)
     }
     return (

@@ -12,6 +12,8 @@ import Login from "./Login/Login";
 import NewHooks from "./newHooks/NewHooks";
 import DashValue from "./context/DashValue";
 import AcronymGenerator from "./ReactTask/AcronymGenerator"
+import CountEventNumber from "./ReactTask/CountEventNumber";
+import CountNegative from "./ReactTask/CountNegative";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -42,6 +44,8 @@ function App() {
                   <li className="nav-item"><Link className="nav-link" to="/NewHooks">NewHooks</Link></li>
                   <li className="nav-item"><Link className="nav-link" to="/DashValue">DashValue</Link></li>
                   <li className="nav-item"><Link className="nav-link" to="/AcronoymStr">AcronoymStr</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/CountEvent">CountEvent</Link></li>
+                  <li className="nav-item"><Link className="nav-link" to="/CountNegative">CountNegative</Link></li>
                 </ul>
 
                 <button className="btn btn-outline-dark me-2" onClick={changeBackground}>
@@ -73,6 +77,8 @@ function App() {
           <Route path="/NewHooks" element={<NewHooks/>}></Route>
           <Route path="/DashValue" element={<DashValue/>}></Route>
           <Route path="/AcronoymStr" element={<AcronymGenerator/>}></Route>
+          <Route path="CountEvent" element={<CountEventNumber/>}></Route>
+          <Route path="CountNegative" element={<CountNegative/>}></Route>
         </Routes>
 
       </BrowserRouter>

@@ -23,6 +23,20 @@ output: "NASA"
 input:Hyper Text Markup Language
 output:"HTML"
 
+****************************************************************************************************************************
+                                                        Task Second
+****************************************************************************************************************************
+Give Array arra of number return  
+the count of element that are even integer (divisiable by 2). 
+The value 0 count  as even
+
+intput = arr[1,2,3,4,5]
+output = 2
+
+intput  = arr [2,4,3]
+output = 2
+
+
 
 
 
