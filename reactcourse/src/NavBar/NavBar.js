@@ -14,7 +14,7 @@ const NavBar = () => {
   { label: "NewHooks", path: "/ReactTask/NewHooks" },
   { label: "DashValue", path: "/ReactTask/DashValue" },
 ]);
-    const [taskArray,setTaskArray] = useState([
+const [taskArray,setTaskArray] = useState([
     {label:"ReactTask", path:"/ReactTask"},
     {label:"AcronoymStr", path:"/ReactTask/AcronoymStr"},
     {label:"CountEvent", path:"/ReactTask/CountEvent"},
@@ -40,6 +40,15 @@ const NavBar = () => {
                                                         )
                                                     })
                                                  }                                                                  
+                                                {/* <option value="/ReactTask">React Topic</option>
+                                                <option value="/ReactTask/variable">variable</option>
+                                                <option value="/ReactTask/Event">Event</option>
+                                                <option value="/ReactTask/SetState">SetState</option>
+                                                <option value="/ReactTask/DynamicCss">DynamicCss</option>
+                                                <option value="/ReactTask/cutomer">cutomer</option>
+                                                <option value="/ReactTask/ParentComp">ParentComp</option>
+                                                <option value="/ReactTask/NewHooks">NewHooks</option>
+                                                <option value="/ReactTask/DashValue">DashValue</option> */}
                                             </select>
                                         </li>
                                         <li className="nav-item">
@@ -52,8 +61,14 @@ const NavBar = () => {
                                                     })
                                                    
                                                 }
+                                                
+                                                {/* <option value="/ReactTask">ReactTask</option>
+                                                <option value="/ReactTask/AcronoymStr">AcronoymStr</option>
+                                                <option value="/ReactTask/CountEvent">CountEvent</option>
+                                                <option value="/ReactTask/CountNegative">CountNegative</option>
+                                                <option value="/ReactTask/CountVowel">CountVowel</option> */}
                                             </select>
-                                        </li>   
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
