@@ -12,6 +12,7 @@ import CountEventNumber from "./ReactTask/CountEventNumber";
 import CountNegative from "./ReactTask/CountNegative";
 import ReactTask from "./ReactTask/ReactTask";
 import NavBar from "./NavBar/NavBar";
+import CountVowel from "./ReactTask/CountVowel";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="AcronoymStr" element={<AcronymGenerator />}></Route>
             <Route path="CountEvent" element={<CountEventNumber />}></Route>
             <Route path="CountNegative" element={<CountNegative />}></Route>
+            <Route path="CountVowel" element={<CountVowel />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

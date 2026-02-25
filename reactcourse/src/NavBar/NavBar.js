@@ -32,6 +32,7 @@ const NavBar = () => {
                                                 <option value="/ReactTask/AcronoymStr">AcronoymStr</option>
                                                 <option value="/ReactTask/CountEvent">CountEvent</option>
                                                 <option value="/ReactTask/CountNegative">CountNegative</option>
+                                                <option value="/ReactTask/CountVowel">CountVowel</option>
                                             </select>
                                         </li>
                                     </ul>
