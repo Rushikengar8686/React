@@ -13,6 +13,7 @@ import CountNegative from "./ReactTask/CountNegative";
 import ReactTask from "./ReactTask/ReactTask";
 import NavBar from "./NavBar/NavBar";
 import CountVowel from "./ReactTask/CountVowel";
+import VoteTask from "./ReactTask/VoteTask";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="CountEvent" element={<CountEventNumber />}></Route>
             <Route path="CountNegative" element={<CountNegative />}></Route>
             <Route path="CountVowel" element={<CountVowel />}></Route>
+            <Route path="VoteTask" element={<VoteTask />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

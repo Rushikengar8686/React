@@ -20,6 +20,7 @@ const [taskArray,setTaskArray] = useState([
     {label:"CountEvent", path:"/ReactTask/CountEvent"},
     {label:"CountNegative", path:"/ReactTask/CountNegative"},
     {label:"CountVowel", path:"/ReactTask/CountVowel"},
+    {label:'VoteTask',path:"/ReactTask/VoteTask"}
 ])
     return (
         <div>
