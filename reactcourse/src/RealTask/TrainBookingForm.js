@@ -29,7 +29,7 @@ const TrainBookingForm = () => {
         // Do not Empty
         if (!trainFrom.FormStaion || !trainFrom.ToStation || !trainFrom.date) {
             alert("Please fill all fields")
-            setShowTicketDetails(null)
+            setShowTicketDetails(null)          
             return
         }
         //Do not Select Same City

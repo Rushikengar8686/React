@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Task from '../task/Task';
 
 const NavBar = () => {
     const naviGate = useNavigate()
@@ -21,6 +22,10 @@ const [taskArray,setTaskArray] = useState([
     {label:"CountNegative", path:"/ReactTask/CountNegative"},
     {label:"CountVowel", path:"/ReactTask/CountVowel"},
     {label:'VoteTask',path:"/ReactTask/VoteTask"}
+])
+const [RealTask,setRealTask] = useState([
+    {label:"Train Booking Form", path:"ReactTask/TrainBooking"},
+    {label:"Task", path:"ReactTask/Task"},
 ])
     return (
         <div>
@@ -52,7 +57,7 @@ const [taskArray,setTaskArray] = useState([
                                                 <option value="/ReactTask/DashValue">DashValue</option> */}
                                             </select>
                                         </li>
-                                        <li className="nav-item">
+                                        <li className="nav-item me-2">
                                             <select name="" id="" className="form-select" onChange={(e)=> naviGate(e.target.value)}>
                                                 {
                                                     taskArray.map((compName,index)=>{
@@ -70,6 +75,20 @@ const [taskArray,setTaskArray] = useState([
                                                 <option value="/ReactTask/CountVowel">CountVowel</option> */}
                                             </select>
                                         </li>
+                                        <li className="nav-item">
+                                            <select name="" id="" className="form-select" onChange={(e)=> naviGate(e.target.value)}>
+                                                <option value="">Select Task</option>
+                                                {
+                                                    RealTask.map((compName,index)=>{
+                                                        return(
+                                                            <option value={compName.path}>{compName.label}</option>
+                                                        )
+                                                    })
+                                                   
+                                                }
+                                            </select>
+                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>

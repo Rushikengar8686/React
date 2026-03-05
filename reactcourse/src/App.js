@@ -14,6 +14,8 @@ import ReactTask from "./ReactTask/ReactTask";
 import NavBar from "./NavBar/NavBar";
 import CountVowel from "./ReactTask/CountVowel";
 import VoteTask from "./ReactTask/VoteTask";
+import TrainBookingForm from "./RealTask/TrainBookingForm";
+import Task from "./task/Task"
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
             <Route path="CountNegative" element={<CountNegative />}></Route>
             <Route path="CountVowel" element={<CountVowel />}></Route>
             <Route path="VoteTask" element={<VoteTask />}></Route>
+            <Route path ="TrainBooking" element={<TrainBookingForm/>}></Route>
+            <Route path = "Task"element={<Task/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
